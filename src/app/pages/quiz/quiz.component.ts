@@ -14,6 +14,7 @@ export class QuizComponent implements OnInit {
   answerSelected = false;
   correctAnswers = 0;
   incorrectAnswers = 0;
+  result=false;
 
   constructor(private quizService: QuizService) {}
 
@@ -26,7 +27,7 @@ export class QuizComponent implements OnInit {
     setTimeout(() => {
       this.currentQuiz++;
       this.answerSelected = false;
-    }, 2000);
+    }, 1000);
 
     if (option) {
       this.correctAnswers++;
@@ -34,4 +35,9 @@ export class QuizComponent implements OnInit {
       this.incorrectAnswers++;
     }
   }
+
+  showResult(){
+    this.result = true;
+  }
+
 }

@@ -20,7 +20,7 @@ import { KatexModule } from 'ng-katex';
 registerLocaleData(en);
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule,
