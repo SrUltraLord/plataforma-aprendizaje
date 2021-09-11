@@ -7,6 +7,7 @@ import { UbicacionElementoComponent } from './../ubicacion-elemento/ubicacion-el
 
 import { EjerciciosPropuestosComponent } from './../ejercicios-propuestos/ejercicios-propuestos.component';
 import { EjerciciosResueltosComponent } from './../ejercicios-resueltos/ejercicios-resueltos.component';
+import { QuizComponent } from './../quiz/quiz.component';
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'ejercicios-resueltos',
     component: EjerciciosResueltosComponent,
+  },
+  {
+    path: 'quiz',
+    component: QuizComponent,
   },
 ];
 

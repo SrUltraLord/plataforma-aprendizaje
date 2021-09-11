@@ -12,6 +12,7 @@ import { PropiedadesVariacionComponent } from './../propiedades-variacion/propie
 
 import { EjerciciosPropuestosComponent } from './../ejercicios-propuestos/ejercicios-propuestos.component';
 import { EjerciciosResueltosComponent } from './../ejercicios-resueltos/ejercicios-resueltos.component';
+import { QuizComponent } from './../quiz/quiz.component';
 
 @NgModule({
   imports: [WelcomeRoutingModule, KatexModule],
@@ -22,6 +23,7 @@ import { EjerciciosResueltosComponent } from './../ejercicios-resueltos/ejercici
     PropiedadesVariacionComponent,
     EjerciciosPropuestosComponent,
     EjerciciosResueltosComponent,
+    QuizComponent,
   ],
   exports: [
     WelcomeComponent,
@@ -30,6 +32,7 @@ import { EjerciciosResueltosComponent } from './../ejercicios-resueltos/ejercici
     PropiedadesVariacionComponent,
     EjerciciosPropuestosComponent,
     EjerciciosResueltosComponent,
+    QuizComponent,
   ],
 })
 export class WelcomeModule {}
