@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { WelcomeRoutingModule } from './welcome-routing.module';
 
-import { WelcomeComponent } from './welcome.component';
-
 import { KatexModule } from 'ng-katex';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NzFormModule } from 'ng-zorro-antd/form';
+
+import { WelcomeComponent } from './welcome.component';
 import { UbicacionElementoComponent } from './../ubicacion-elemento/ubicacion-elemento.component';
 import { GeneralidadesDesarrolloComponent } from './../generalidades-desarrollo/generalidades-desarrollo.component';
 import { PropiedadesVariacionComponent } from './../propiedades-variacion/propiedades-variacion.component';
@@ -15,7 +18,14 @@ import { EjerciciosResueltosComponent } from './../ejercicios-resueltos/ejercici
 import { QuizComponent } from './../quiz/quiz.component';
 
 @NgModule({
-  imports: [WelcomeRoutingModule, KatexModule],
+  imports: [
+    WelcomeRoutingModule,
+    ReactiveFormsModule,
+    KatexModule,
+    CommonModule,
+    FormsModule,
+    NzFormModule,
+  ],
   declarations: [
     WelcomeComponent,
     GeneralidadesDesarrolloComponent,

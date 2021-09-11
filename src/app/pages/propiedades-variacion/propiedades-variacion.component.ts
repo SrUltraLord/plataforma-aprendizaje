@@ -43,7 +43,6 @@ export class PropiedadesVariacionComponent implements OnInit {
     de ionización ($ Ei_n $) para los primeros elementos, en el caso de Li se tiene:
     $Ei = 2.17 x 10^{-11}$ ergs/átomo. $(3)^2 / 1^2 = 11763 \\; KJ/mol$, valor que es
     parecido al experimental: $11815 \\; KJ/mol$
-    
   `;
 
   
