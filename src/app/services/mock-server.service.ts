@@ -7,8 +7,12 @@ import { Usuario } from './../model/Usuario';
 export class MockServerService {
   public usuario: Usuario;
 
-  constructor(usuario: Usuario) {
-    this.usuario = usuario;
+  constructor() {
+    this.usuario = new Usuario();
+  }
+
+  loginUser() {
+    this.usuario.token = 'Empanada123';
   }
 
   isAuthUser() {

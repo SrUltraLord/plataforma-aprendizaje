@@ -6,7 +6,7 @@ import { MockServerService } from '../services/mock-server.service';
 @Injectable({
   providedIn: 'root',
 })
-export class UsuarioGuardService {
+export class UsuarioGuard {
   path: ActivatedRouteSnapshot[];
   route: ActivatedRouteSnapshot;
 
@@ -17,7 +17,7 @@ export class UsuarioGuardService {
 
   canActivate(): boolean {
     if (!this.msService.isAuthUser()) {
-      this.router.navigateByUrl('/quimica');
+      this.router.navigateByUrl('/');
       return false;
     }
 
