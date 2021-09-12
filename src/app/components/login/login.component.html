@@ -40,7 +40,20 @@
       class="login-form-button login-form-margin"
       [nzType]="'primary'"
     >
-      Log in
+      Iniciar sesión
     </button>
+
+    <nz-divider nzText="Inicia sesión con"></nz-divider>
+
+    <div>
+      <button
+        nzType="primary"
+        (click)="loginWithGoogle()"
+        class="btn btn-danger"
+      >
+        <i nz-icon nzType="google"></i>
+        Google
+      </button>
+    </div>
   </form>
 </div>

@@ -18,10 +18,17 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzMessageModule } from 'ng-zorro-antd/message';
 import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
 import { LoginComponent } from './components/login/login.component';
 
 // Para usar latex
 import { KatexModule } from 'ng-katex';
+// Login con Google
+import {
+  SocialLoginModule,
+  SocialAuthServiceConfig,
+  GoogleLoginProvider,
+} from 'angularx-social-login';
 
 registerLocaleData(en);
 
@@ -42,9 +49,27 @@ registerLocaleData(en);
     NzInputModule,
     NzMessageModule,
     NzGridModule,
+    NzDividerModule,
+    SocialLoginModule,
     KatexModule,
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [
+    { provide: NZ_I18N, useValue: en_US },
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '897638658678-68ih04i49nbgan40j851otfm4ph5947k.apps.googleusercontent.com'
+            ),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
