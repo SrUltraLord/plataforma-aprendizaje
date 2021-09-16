@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', component: LoginComponent },
   {
     path: 'quimica',
-    canActivate: [UsuarioGuard],
+    // canActivate: [UsuarioGuard],
     loadChildren: () =>
       import('./pages/welcome/welcome.module').then((m) => m.WelcomeModule),
   },
